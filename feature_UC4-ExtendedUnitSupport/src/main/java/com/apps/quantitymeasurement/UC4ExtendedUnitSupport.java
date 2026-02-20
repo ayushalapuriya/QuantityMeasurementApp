@@ -1,10 +1,13 @@
 package com.apps.quantitymeasurement;
 
-public class UC3GenericQuantity {
+public class UC4ExtendedUnitSupport {
 
     public enum Unit {
+
+        INCH(1.0),
         FEET(12.0),
-        INCH(1.0);
+        YARD(36.0),
+        CENTIMETER(0.393701);
 
         private final double conversionFactorToInch;
 
@@ -42,10 +45,9 @@ public class UC3GenericQuantity {
 
             Quantity other = (Quantity) obj;
 
-            return Double.compare(
-                    this.toBaseUnit(),
-                    other.toBaseUnit()
-            ) == 0;
+            return Math.abs(
+                    this.toBaseUnit() - other.toBaseUnit()
+            ) < 0.0001;   // floating tolerance
         }
 
         @Override
