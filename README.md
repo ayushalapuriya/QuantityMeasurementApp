@@ -4,6 +4,8 @@ A clean, modular, and extensible Java-based Quantity Measurement System built us
 
 The project has been developed incrementally from UC1 to UC5, focusing on accurate unit comparison, reliable conversion logic, and arithmetic operations on value objects.
 
+_____________________________________________________________________
+
 🚀 Overview
 
 This application currently supports:
@@ -20,6 +22,8 @@ This application currently supports:
 
 The system is designed to be immutable, type-safe, and easily extensible for future measurement domains.
 
+_____________________________________________________________________
+
 📚 Supported Measurement Types
 📏 Length
 
@@ -32,6 +36,8 @@ Yards
 Centimeters
 
 (Current implementation focuses on length comparison, conversion, and addition accuracy up to UC6.)
+
+_____________________________________________________________________
 
 🏗️ Design Highlights
 
@@ -47,6 +53,8 @@ Centimeters
 
 🔹 Validation-first Design for nulls, invalid units, and non-finite values
 
+_____________________________________________________________________
+
 📈 Use Case Progression (UC1 – UC5)
 
 Implemented incrementally to strengthen design and logic step-by-step:
@@ -59,6 +67,8 @@ UC5 → Robust conversion architecture with base unit strategy
 
 
 Each use case was implemented using TDD — tests were written first, followed by minimal implementation to pass them.
+
+_____________________________________________________________________
 
 🧠 Key Technical Concepts Applied
 
@@ -78,6 +88,8 @@ Exception-driven validation
 
 JUnit 5 testing practices
 
+_____________________________________________________________________
+
 🎯 Learning Outcomes
 
 This project strengthened practical understanding of:
@@ -92,9 +104,11 @@ Building scalable and extensible architecture
 
 Maintaining mathematical correctness across unit conversions
 
+_____________________________________________________________________
+
 📌 Current Status
 
-✔️ Completed up to UC6 (Addition of Length Units)
+✔️ Completed up to UC5 (Addition of Length Units)
 🚧 Future scope includes:
 
 Subtraction, multiplication, division
@@ -105,4 +119,7 @@ Generic Quantity<T> abstraction
 
 Production-grade architecture enhancements
 
+_____________________________________________________________________
+
 ⭐ This project demonstrates strong fundamentals in Java design, abstraction, TDD discipline, and scalable system thinking.
+
