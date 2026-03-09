@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import com.apps.quantitymeasurement.UC2FeetAndInchesEquality.Feet;
 import com.apps.quantitymeasurement.UC2FeetAndInchesEquality.Inches;
 
-public class UC2FeetAndInchesEqualityTest {
+public class FeetAndInchesEqualityTest {
 
     // ===== FEET TESTS =====
 

@@ -1,6 +1,6 @@
 package com.apps.quantitymeasurement;
 
-public class UC2FeetAndInchesEquality {
+public class FeetAndInchesEquality {
 
     public static class Feet {
 
