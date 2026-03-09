@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import com.apps.quantitymeasurement.UC3GenericQuantity.Quantity;
 import com.apps.quantitymeasurement.UC3GenericQuantity.Unit;
 
-public class UC3GenericQuantityTest {
+public class GenericQuantityTest {
 
     @Test
     public void testFeetToFeetEquality() {

@@ -1,6 +1,6 @@
 package com.apps.quantitymeasurement;
 
-public class UC3GenericQuantity {
+public class GenericQuantity {
 
     public enum Unit {
         FEET(12.0),
