@@ -1,6 +1,6 @@
 package com.apps.quantitymeasurement;
 
-public class UC4ExtendedUnitSupport {
+public class ExtendedUnitSupport {
 
     public enum Unit {
 

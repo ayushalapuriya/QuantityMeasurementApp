@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import com.apps.quantitymeasurement.UC4ExtendedUnitSupport.Quantity;
 import com.apps.quantitymeasurement.UC4ExtendedUnitSupport.Unit;
 
-public class UC4ExtendedUnitSupportTest {
+public class ExtendedUnitSupportTest {
 
     @Test
     public void testFeetToInchEquality() {
