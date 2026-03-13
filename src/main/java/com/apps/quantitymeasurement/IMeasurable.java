@@ -1,23 +1,32 @@
 package com.apps.quantitymeasurement;
 
+@FunctionalInterface
+interface SupportsArithmetic {
+    boolean isSupported();
+}
+
 public interface IMeasurable {
 
-    // Mandatory Conversion Methods
-    double convertToBaseUnit(double value);
-
-    double convertFromBaseUnit(double baseValue);
+    double getConversionFactor();
 
     String getUnitName();
 
-    // UC14 OPTIONAL ARITHMETIC SUPPORT (DEFAULT METHODS)
+    // ✅ MUST BE DEFAULT (THIS FIXES YOUR ERROR)
+    default double convertToBaseUnit(double value) {
+        return value * getConversionFactor();
+    }
+
+    default double convertFromBaseUnit(double baseValue) {
+        return baseValue / getConversionFactor();
+    }
+
+    // UC14 arithmetic capability
     SupportsArithmetic supportsArithmetic = () -> true;
 
     default boolean supportsArithmetic() {
         return supportsArithmetic.isSupported();
     }
 
-    // operation validation hook
     default void validateOperationSupport(String operation) {
-        // Default → all operations allowed
     }
 }
