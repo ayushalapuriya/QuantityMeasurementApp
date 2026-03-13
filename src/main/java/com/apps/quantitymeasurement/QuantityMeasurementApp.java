@@ -1,30 +1,22 @@
 package com.apps.quantitymeasurement;
 
+import com.apps.quantitymeasurement.controller.QuantityMeasurementController;
+import com.apps.quantitymeasurement.repository.*;
+import com.apps.quantitymeasurement.service.*;
+
 public class QuantityMeasurementApp {
 
     public static void main(String[] args) {
 
-        QuantityController controller = new QuantityController();
+        IQuantityMeasurementRepository repository =
+                new QuantityMeasurementDatabaseRepository();
 
-        Quantity<LengthUnit> q1 =
-                new Quantity<>(1, LengthUnit.FEET);
+        IQuantityMeasurementService service =
+                new QuantityMeasurementServiceImpl(repository);
 
-        Quantity<LengthUnit> q2 =
-                new Quantity<>(12, LengthUnit.INCHES);
+        QuantityMeasurementController controller =
+                new QuantityMeasurementController(service);
 
-        System.out.println(controller.checkEquality(q1, q2));
-
-        Quantity<LengthUnit> result =
-                controller.add(q1, q2, LengthUnit.FEET);
-
-        System.out.println(result);
-
-        Quantity<WeightUnit> w1 =
-                new Quantity<>(1, WeightUnit.KILOGRAM);
-
-        Quantity<WeightUnit> w2 =
-                new Quantity<>(1000, WeightUnit.GRAM);
-
-        System.out.println(controller.checkEquality(w1, w2));
+        controller.demo();
     }
 }
