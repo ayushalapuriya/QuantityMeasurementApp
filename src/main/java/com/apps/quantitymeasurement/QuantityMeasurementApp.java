@@ -1,26 +1,23 @@
 package com.apps.quantitymeasurement;
+
 public class QuantityMeasurementApp {
 
-    public static class Feet {
+    public static void main(String[] args) {
 
-        private final double value;
+        Quantity q1 =
+                new Quantity(1, LengthUnit.FEET);
 
-        public Feet(double value) {
-            this.value = value;
-        }
+        Quantity q2 =
+                new Quantity(12, LengthUnit.INCHES);
 
-        @Override
-        public boolean equals(Object obj) {
+        Quantity result =
+                Quantity.add(q1, q2, LengthUnit.FEET);
 
-            if (this == obj)
-                return true;
+        System.out.println(result);
 
-            if (obj == null || getClass() != obj.getClass())
-                return false;
+        Quantity result2 =
+                Quantity.add(q1, q2, LengthUnit.INCHES);
 
-            Feet other = (Feet) obj;
-
-            return Double.compare(this.value, other.value) == 0;
-        }
+        System.out.println(result2);
     }
 }
