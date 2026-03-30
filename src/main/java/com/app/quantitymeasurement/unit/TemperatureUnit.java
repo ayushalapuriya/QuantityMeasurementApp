@@ -1,4 +1,4 @@
-package com.apps.quantitymeasurement;
+package com.app.quantitymeasurement.unit;
 import java.util.function.Function;
 
 public enum TemperatureUnit implements IMeasurable {
@@ -59,4 +59,10 @@ public enum TemperatureUnit implements IMeasurable {
     public String getUnitName() {
         return name();
     }
+
+	@Override
+	public double getConversionFactor() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
