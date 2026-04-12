@@ -34,33 +34,33 @@ public final class Quantity<U extends IMeasurable> {
     }
 
     // UC8 GENERIC ADD (UC6 + UC7)
-    public static Quantity add(
-            Quantity q1,
-            Quantity q2,
-            Unit targetUnit) {
+    // public static Quantity add(
+    //         Quantity q1,
+    //         Quantity q2,
+    //         Unit targetUnit) {
 
-        if (q1 == null || q2 == null)
-            throw new IllegalArgumentException("Quantity cannot be null");
+    //     if (q1 == null || q2 == null)
+    //         throw new IllegalArgumentException("Quantity cannot be null");
 
-        if (targetUnit == null)
-            throw new IllegalArgumentException("Target unit required");
+    //     if (targetUnit == null)
+    //         throw new IllegalArgumentException("Target unit required");
 
-        // category validation
-        if (!q1.unit.getCategory().equals(q2.unit.getCategory()))
-            throw new IllegalArgumentException("Different categories");
+    //     // category validation
+    //     if (!q1.unit.getCategory().equals(q2.unit.getCategory()))
+    //         throw new IllegalArgumentException("Different categories");
 
-        if (!targetUnit.getCategory().equals(q1.unit.getCategory()))
-            throw new IllegalArgumentException("Invalid target unit");
+    //     if (!targetUnit.getCategory().equals(q1.unit.getCategory()))
+    //         throw new IllegalArgumentException("Invalid target unit");
 
-        double baseSum =
-                q1.unit.toBase(q1.value)
-                        + q2.unit.toBase(q2.value);
+    //     double baseSum =
+    //             q1.unit.toBase(q1.value)
+    //                     + q2.unit.toBase(q2.value);
 
-        double resultValue =
-                targetUnit.fromBase(baseSum);
+    //     double resultValue =
+    //             targetUnit.fromBase(baseSum);
 
-        return new Quantity(resultValue, targetUnit);
-    }
+    //     return new Quantity(resultValue, targetUnit);
+    // }
 
     // Equality (UC2–UC5 generic)
     // ---------- Equality ----------
