@@ -4,27 +4,20 @@ public class QuantityMeasurementApp {
 
     public static void main(String[] args) {
 
-        QuantityController controller = new QuantityController();
+        Quantity q1 =
+                new Quantity(1, LengthUnit.FEET);
 
-        Quantity<LengthUnit> q1 =
-                new Quantity<>(1, LengthUnit.FEET);
+        Quantity q2 =
+                new Quantity(12, LengthUnit.INCHES);
 
-        Quantity<LengthUnit> q2 =
-                new Quantity<>(12, LengthUnit.INCHES);
-
-        System.out.println(controller.checkEquality(q1, q2));
-
-        Quantity<LengthUnit> result =
-                controller.add(q1, q2, LengthUnit.FEET);
+        Quantity result =
+                Quantity.add(q1, q2, LengthUnit.FEET);
 
         System.out.println(result);
 
-        Quantity<WeightUnit> w1 =
-                new Quantity<>(1, WeightUnit.KILOGRAM);
+        Quantity result2 =
+                Quantity.add(q1, q2, LengthUnit.INCHES);
 
-        Quantity<WeightUnit> w2 =
-                new Quantity<>(1000, WeightUnit.GRAM);
-
-        System.out.println(controller.checkEquality(w1, w2));
+        System.out.println(result2);
     }
 }
