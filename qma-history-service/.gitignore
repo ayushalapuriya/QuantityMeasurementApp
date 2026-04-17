@@ -32,5 +32,5 @@ build/
 ### VS Code ###
 .vscode/
 
-# Ignore local config files
-application-local.properties
+### ignore local config files ###
+**/application-local.properties

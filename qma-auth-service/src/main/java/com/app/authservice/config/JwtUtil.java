@@ -1,6 +1,5 @@
 package com.app.authservice.config;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import io.jsonwebtoken.Jwts;
@@ -13,11 +12,10 @@ import java.util.Date;
 @Component
 public class JwtUtil {
 
-    @Value("${jwt.secret}")
-    private String secret;
+    private final String SECRET = "mysecretkeymysecretkeymysecretkey12345";
 
     private Key getSignKey() {
-        return Keys.hmacShaKeyFor(secret.getBytes());
+        return Keys.hmacShaKeyFor(SECRET.getBytes());
     }
 
     public String generateToken(String email) {
